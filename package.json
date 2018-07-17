@@ -1,5 +1,5 @@
 {
-  "name": "electron-quick-start",
+  "name": "rhythm",
   "version": "1.0.0",
   "description": "A minimal Electron application",
   "main": "main.js",
@@ -9,16 +9,14 @@
     "eslint": "eslint --fix --ext .js,.jsx src",
     "fix": "standard --fix src/*.js src/*.jsx"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/ervinewell/rhythm.git",
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "react",
+    "rhythm"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "ervinewell",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.6",
