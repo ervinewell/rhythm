@@ -1,0 +1,7 @@
+node_modules/
+gulp/
+webpack/
+build/
+test/unit/coverage
+test/unit/index.js
+test/unit/karma.conf.js

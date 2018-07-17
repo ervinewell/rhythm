@@ -5,15 +5,24 @@
     <title>Hello World!</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-
+    Hello World!
+    <div id="root"></div>
     <script>
-      // You can also require other files to run in this process
-      require('./renderer.js')
+      {
+        const scripts = [];
+        const port = process.env.PORT || 1212;
+
+        scripts.push(
+          (process.env.NODE_ENV !== 'dev')
+            ? 'http://localhost:' + port + '/dist/renderer.js'
+            : './dist/renderer.js'
+        );
+        document.write(
+          scripts
+            .map(script => `<script defer src="${script}"><\/script>`)
+            .join('')
+        );
+      }
     </script>
   </body>
 </html>
