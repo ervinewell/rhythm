@@ -24,7 +24,8 @@ module.exports = merge({}, baseConfigs, {
   },
   plugins: [
     new webpack.EnvironmentPlugin({
-      NODE_ENV: 'dev'
+      NODE_ENV: 'dev',
+      port: 1212
     }),
     new webpack.HotModuleReplacementPlugin()
   ]

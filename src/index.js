@@ -1,8 +1,17 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
-import App from './App'
-import registerServiceWorker from './registerServiceWorker'
+import dva from 'dva'
+import 'antd/dist/antd.less'
 
-ReactDOM.render(<App />, document.getElementById('root'))
-registerServiceWorker()
+// 1. Initialize
+const app = dva()
+
+// 2. Plugins
+// app.use({});
+
+// 3. Model
+app.model(require('./models/container').default)
+
+// 4. Router
+app.router(require('./router').default)
+
+// 5. Start
+app.start('#root')

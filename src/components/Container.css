@@ -1,0 +1,8 @@
+.menu {
+  line-height: 64px;
+  transform: translateY(-1px);
+}
+
+.content {
+  padding: 0 50px;
+}
