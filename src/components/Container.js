@@ -10,6 +10,10 @@ const { Header: AHeader, Content } = Layout
 class Container extends Component {
   state = {
     menuList: [{
+      label: '首页',
+      value: 'index',
+      url: '/'
+    }, {
       label: '设置',
       value: 'setting',
       icon: 'setting',

@@ -1,22 +1,19 @@
 import React from 'react'
 import { Router, Route, Switch } from 'dva/router'
+
 import Index from './routes/Index'
+import Setting from './routes/Setting'
 import Container from './components/Container'
 
-const Setting = () => (<div>Setting</div>)
-const RouterConfig = ({ history } = {}) => {
-  return (
-    <Router history={history}>
-      <div>
-        <Container>
-          <Switch>
-            <Route path="/setting" exact component={Setting} />
-            <Route path="/" exact component={Index} />
-          </Switch>
-        </Container>
-      </div>
-    </Router>
-  )
-}
+const RouterConfig = ({ history } = {}) => (
+  <Router history={history}>
+    <Container>
+      <Switch>
+        <Route path="/" exact component={Index} />
+        <Route path="/setting" exact component={Setting} />
+      </Switch>
+    </Container>
+  </Router>
+)
 
 export default RouterConfig
